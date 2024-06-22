@@ -12,7 +12,6 @@ Widget defaultButton({
     InkWell(
       onTap: onTap,
       child: Container(
-        margin: const EdgeInsets.all(10),
         width: width,
         height: height,
         decoration: BoxDecoration(
@@ -29,3 +28,10 @@ Widget defaultButton({
             )),
       ),
     );
+
+// SizeBox
+extension View on num {
+  Widget get height => SizedBox(height: toDouble());
+
+  Widget get width => SizedBox(width: toDouble());
+}
